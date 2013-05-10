@@ -67,7 +67,6 @@ static int getCallingPid() {
 static int getCallingUid() {
     return IPCThreadState::self()->getCallingUid();
 }
-// ----------------------------------------------------------------------------
 
 #if defined(BOARD_HAVE_HTC_FFC)
 #define HTC_SWITCH_CAMERA_FILE_PATH "/sys/android_camera2/htcwc"
@@ -85,7 +84,6 @@ static void htcCameraSwitch(int cameraId)
     }
 }
 #endif
-
 
 // This is ugly and only safe if we never re-create the CameraService, but
 // should be ok for now.
